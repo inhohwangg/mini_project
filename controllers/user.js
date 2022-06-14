@@ -1,7 +1,6 @@
 const {User} = require('../models')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-const { rest } = require('lodash')
 require("dotenv").config()
 
 //회원가입 API => POST
