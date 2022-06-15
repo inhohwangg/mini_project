@@ -17,6 +17,7 @@ sequelize
 
 //라우터 불러오기
 const userRouter = require('./routes/user')
+const myprofileRouter = require('./routes/myprofile')
 
 
 //각종 미들웨어
@@ -30,6 +31,7 @@ app.use(hpp())
 //라우터 연결
 app.use("/api", [
     userRouter,
+    myprofileRouter
 ])
 
 //서버 실행
