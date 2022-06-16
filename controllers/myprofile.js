@@ -17,4 +17,18 @@ const mypage = async(req,res)=> {
     }
 }
 
-module.exports = {mypage}
+//유저 닉네임 수정
+//썬더클라이언트 테스트 완료
+const mypageModify = async(req,res)=> {
+    const {userId} = req.query
+    const {userNick} = req.body
+    try {
+        const nickmodify = await User.update({userNick:userNick},{where:{userId}})
+        res.status(200).json({result:true,msg:"닉네임 수정 성공",nickmodify})
+    }catch(error) {
+        console.log(error,"닉네임 수정에서 오류발생")
+        res.status(400).json({result:false,msg:"닉네임 수정 실패"})
+    }
+}
+
+module.exports = {mypage,mypageModify}
