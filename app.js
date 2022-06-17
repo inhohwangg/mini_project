@@ -1,8 +1,5 @@
 const express = require('express')
 const app = require('express')()
-const morgan = require('morgan')
-const helmet = require('helmet')
-const hpp = require('hpp')
 const {sequelize} = require('./models')
 
 //MySQL Sequelize 연결
@@ -24,9 +21,6 @@ const myprofileRouter = require('./routes/myprofile')
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(express.urlencoded({extended:false}))
-app.use(morgan('tiny'))
-app.use(helmet())
-app.use(hpp())
 
 //라우터 연결
 app.use("/api", [
