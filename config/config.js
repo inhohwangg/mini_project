@@ -2,24 +2,25 @@ require('dotenv').config()
 
 module.exports = {
   "development": {
-    "username": "root",
-    "password": process.env.SEQUELIZE_PASSWORD,
-    "database": "mini_test",
-    "host": "127.0.0.1",
+    "username": process.env.NAME,
+    "password": process.env.PASSWORD,
+    "database": process.env.DBNAME,
+    "host": process.env.HOST,
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": process.env.SEQUELIZE_PASSWORD,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": process.env.NAME,
+    "password": process.env.PASSWORD,
+    "database": process.env.DBNAME,
+    "host": process.env.HOST,
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": process.env.SEQUELIZE_PASSWORD,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": process.env.NAME,
+    "password": process.env.PASSWORD,
+    "database": process.env.DBNAME,
+    "host": process.env.HOST,
     "dialect": "mysql"
   }
+
 }
