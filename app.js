@@ -28,7 +28,8 @@ app.use("/api", [
     myprofileRouter
 ])
 
-//서버 실행
+//서버 실행!
+//잔디심기 캠페인
 app.listen(3000, ()=> {
     console.log("3000포트로 서버가 켜졌습니다.")
 })
