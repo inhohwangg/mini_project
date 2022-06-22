@@ -21,7 +21,6 @@ const userData = async(req,res)=> {
 
 //유저 전체데이터 가져오기
 const alldataserch = async(req,res)=> {
-    const {userId} = req.query
     try {
         const alldata = await Post.findOne()
         res.status(200).json({result:true,msg:"전체 데이터 가져오기 성공!",alldata})
@@ -33,9 +32,8 @@ const alldataserch = async(req,res)=> {
 
 //유저 요일데이터 가져오기
 const daydataserch = async (req,res)=> {
-    const {day} = req.query
     try {
-        const daydata = await Post.findOne({attribute:["day"],where:{day}})
+        const daydata = await Post.findOne({attribute:["day"],where:{}})
     }catch(error) {
         console.log(error, "요일 데이터가져오는 곳에서 에러발생함")
         res.status(400).json({result:false,msg:"요일 데이터 가져오기 실패"})

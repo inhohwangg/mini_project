@@ -1,5 +1,8 @@
 const express = require('express')
 const app = require('express')()
+const helmet = require('helmet')
+const hpp = require('hpp')
+const morgan = require('morgan')
 const {sequelize} = require('./models')
 
 //MySQL Sequelize 연결
@@ -22,6 +25,9 @@ const postRouter = require('./routes/post')
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(express.urlencoded({extended:false}))
+app.use(helmet())
+app.use(hpp())
+app.use(morgan('dev'))
 
 //라우터 연결
 app.use("/api", [
@@ -29,6 +35,10 @@ app.use("/api", [
     myprofileRouter,
     postRouter
 ])
+
+app.use('/', (req,res)=> {
+    res.send('<h1>안녕하세요</h1>')
+})
 
 //서버 실행!
 //잔디심기 캠페인
