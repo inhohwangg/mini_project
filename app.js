@@ -39,6 +39,10 @@ app.use("/api", [
 //     res.send('<h1>안녕하세요</h1>')
 // })
 
+app.use('/', (req,res)=> {
+    res.send('<h1>안녕하세요</h1>')
+})
+
 //서버 실행!
 //잔디심기 캠페인
 app.listen(8080, ()=> {

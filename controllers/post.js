@@ -1,18 +1,24 @@
-const {Myprofile,User,Post} = require('../models')
+const {Myprofile,User,Post,Day} = require('../models')
 
 //유저 데이터 생성하는 API
 const userData = async(req,res)=> {
     const {userId} = req.query
-    const {day,username,checktime,age,gender,phonenumber} = req.body
+    const {day1,day2,username,checktime,age,gender,phonenumber} = req.body
     try {
         const userdatacreate = await Post.create({
-            day,
+            day1,
+            day2,
             username,
             checktime,
             age,
             gender,
             phonenumber})
-        res.status(201).json({result:true,msg:"유저데이터 생성 성공!",userdatacreate})
+        const dayplus = await Day.create({
+            day1,
+            day2,
+            username
+        })
+        res.status(201).json({result:true,msg:"유저데이터 생성 성공!",userdatacreate,dayplus})
     }catch (error){
         console.log(error,"유저데이터 작성 실패")
         res.status(400).json({result:false,msg:"유저데이터 생성 실패"})
@@ -21,7 +27,6 @@ const userData = async(req,res)=> {
 
 //유저 전체데이터 가져오기
 const alldataserch = async(req,res)=> {
-    const {userId} = req.query
     try {
         const alldata = await Post.findAll()
         console.log(alldata)
@@ -46,9 +51,10 @@ const onedataserch = async(req,res)=> {
 
 //유저 요일데이터 가져오기
 const daydataserch = async (req,res)=> {
-    const {day} = req.query
+    const {day1} = req.query
     try {
-        const daydata = await Post.findOne({attribute:["day"],where:{day}})
+        const daydata = await Day.findOne({where:{day1}})
+        res.status(200).json({result:true,msg:"요일 데이터 가져오기 성공",daydata})
     }catch(error) {
         console.log(error, "요일 데이터가져오는 곳에서 에러발생함")
         res.status(400).json({result:false,msg:"요일 데이터 가져오기 실패"})

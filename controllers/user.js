@@ -16,7 +16,7 @@ const signup = async(req,res)=> {
 
         //사용자가 입력한 내용을 DB에 만들고 저장하겠다는 뜻
         await User.create({userId,userPw:hashed,userPwCheck:hashed,userNick,from})
-        res.status(201).json({result:true,msg:"회원가입 성공!!",userId,userPw,userPwCheck,userNick})
+        res.status(201).json({result:true,msg:"회원가입 성공!!",userId,userPw:hashed,userPwCheck:hashed,userNick,from})
     }catch(error) {
         console.log(error,'회원가입 POST 오류발생')
         res.status(400).json({result:false,msg:"회원가입 실패"})
