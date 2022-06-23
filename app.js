@@ -1,6 +1,9 @@
 const express = require('express')
 const app = require('express')()
+const helmet = require('helmet')
+const hpp = require('hpp')
 const {sequelize} = require('./models')
+const cors = require('cors')
 
 //MySQL Sequelize 연결
 sequelize
@@ -22,6 +25,9 @@ const postRouter = require('./routes/post')
 app.use(express.json())
 app.use(express.urlencoded())
 app.use(express.urlencoded({extended:false}))
+app.use(helmet())
+app.use(cors())
+// app.use(hpp()) // 중복 파라미터 방지 
 
 //라우터 연결
 app.use("/api", [
@@ -29,9 +35,12 @@ app.use("/api", [
     myprofileRouter,
     postRouter
 ])
+// app.use('/', (req, res) => {
+//     res.send('<h1>안녕하세요</h1>')
+// })
 
 //서버 실행!
 //잔디심기 캠페인
-app.listen(3000, ()=> {
+app.listen(8080, ()=> {
     console.log("3000포트로 서버가 켜졌습니다.")
 })

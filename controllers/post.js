@@ -23,8 +23,21 @@ const userData = async(req,res)=> {
 const alldataserch = async(req,res)=> {
     const {userId} = req.query
     try {
-        const alldata = await Post.findOne()
+        const alldata = await Post.findAll()
+        console.log(alldata)
         res.status(200).json({result:true,msg:"전체 데이터 가져오기 성공!",alldata})
+    }catch (error) {
+        console.log(error, "전체 데이터가져오는 곳에서 에러발생함")
+        res.status(400).json({result:false,msg:"전체 데이터 가져오기 실패"})
+    }
+}
+
+//유저 전체데이터 가져오기
+const onedataserch = async(req,res)=> {
+    const {userId} = req.query
+    try {
+        const onedata = await Post.findOne()
+        res.status(200).json({result:true,msg:"전체 데이터 가져오기 성공!",onedata})
     }catch (error) {
         console.log(error, "전체 데이터가져오는 곳에서 에러발생함")
         res.status(400).json({result:false,msg:"전체 데이터 가져오기 실패"})
@@ -42,4 +55,4 @@ const daydataserch = async (req,res)=> {
     }
 }
 
-module.exports = {userData,alldataserch,daydataserch}
+module.exports = {userData,alldataserch,onedataserch,daydataserch}
