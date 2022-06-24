@@ -62,6 +62,7 @@ const loginCheck = async(req,res)=> {
 }
 
 //로그아웃 API => GET
+//썬더클라이언트 확인완료
 const logout = async(req,res)=> {
     const {userId} = req.query
     try {
