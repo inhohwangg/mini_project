@@ -6,7 +6,7 @@ const userData = async(req,res)=> {
     const {userId} = req.query
 
     //사용자가 입력해야하는 항목들
-    const {day1,day2,username,checktime,age,gender,phonenumber} = req.body
+    const {day1,day2,username,checktime,age,gender,phonenumber,signupday,position} = req.body
     try {
         //Post 테이블에 쌓이는 데이터
         const userdatacreate = await Post.create({
@@ -16,7 +16,9 @@ const userData = async(req,res)=> {
             checktime,
             age,
             gender,
-            phonenumber})
+            phonenumber,
+            signupday,
+            position})
         
         //Day 테이블에 쌓이는 데이터
         const dayplus = await Day.create({
