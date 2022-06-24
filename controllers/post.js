@@ -48,10 +48,11 @@ const alldataserch = async(req,res)=> {
 //유저 요일데이터 가져오기
 //썬더클라이언트 확인완료
 const daydataserch = async (req,res)=> {
-    const {day1} = req.query
+    const {day1,day2} = req.query
     try {
         const daydata = await Day.findOne({where:{day1}})
-        res.status(200).json({result:true,msg:"요일 데이터 가져오기 성공",daydata})
+        const daydata2 = await Day.findOne({where:{day2}})
+        res.status(200).json({result:true,msg:"요일 데이터 가져오기 성공",daydata,daydata2})
     }catch(error) {
         console.log(error, "요일 데이터가져오는 곳에서 에러발생함")
         res.status(400).json({result:false,msg:"요일 데이터 가져오기 실패"})
