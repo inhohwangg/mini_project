@@ -4,6 +4,8 @@ const helmet = require('helmet')
 const hpp = require('hpp')
 const morgan = require('morgan')
 const {sequelize} = require('./models')
+const cors = require('cors')
+const port = 3000
 
 //MySQL Sequelize 연결
 sequelize
@@ -27,7 +29,8 @@ app.use(express.urlencoded())
 app.use(express.urlencoded({extended:false}))
 app.use(helmet())
 app.use(hpp())
-app.use(morgan('dev'))
+app.use(morgan('combined'))
+app.use(cors())
 
 //라우터 연결
 app.use("/api", [
@@ -42,6 +45,6 @@ app.use('/', (req,res)=> {
 
 //서버 실행!
 //잔디심기 캠페인
-app.listen(3000, ()=> {
-    console.log("3000포트로 서버가 켜졌습니다.")
+app.listen(port, ()=> {
+    console.log(`${port}포트로 서버가 켜졌습니다.`)
 })
