@@ -61,6 +61,8 @@ const daydataserch = async (req,res)=> {
     }
 }
 
+//유저 데이터 삭제하기
+//썬더클라이언트 확인완료
 const dataDelete = async (req,res)=> {
     const {username} = req.query
     try {
