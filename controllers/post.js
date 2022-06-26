@@ -78,8 +78,8 @@ const namedataserch = async(req,res)=> {
 const daydataserch = async (req,res)=> {
     const {day1,day2} = req.query
     try {
-        const daydata = await Day.findAll({where:{day1}})
-        const daydata2 = await Day.findAll({where:{day2}})
+        const daydata = await Post.findAll({where:{day1}})
+        const daydata2 = await Post.findAll({where:{day2}})
         res.status(200).json({result:true,msg:"요일 데이터 가져오기 성공",daydata,daydata2})
     }catch(error) {
         console.log(error, "요일 데이터가져오는 곳에서 에러발생함")
