@@ -36,6 +36,12 @@ const login = async(req,res)=> {
 
         const unHashPw = bcrypt.compareSync(userPw, user.userPw)
         
+        if (user.userId !== userId || unHashPw === false) {
+            res.status(401).json({
+                msg:"아이디 혹은 비밀번호가 안맞습니다."
+            })
+        }
+
         //로그인용 토큰
         const loginToken = jwt.sign(
             {userId:user.userId},
