@@ -9,8 +9,10 @@ router.post('/userData', authMiddleware, userData)
 
 //유저 데이터 가져오기(전체) API
 router.get('/alldataserch', authMiddleware, alldataserch)
+
 //유저 데이터 가져오기(한개) API
 router.get('/onedataserch', authMiddleware, onedataserch)
+
 //유저 이름검색 가져오기(한개) API
 router.get('/namedataserch', authMiddleware, namedataserch)
 

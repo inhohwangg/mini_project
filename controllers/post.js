@@ -60,9 +60,10 @@ const onedataserch = async(req,res)=> {
     }
 }
 
+//유저 이름으로 데이터 조회하기
+//썬더클라이언트 확인완료
 const namedataserch = async(req,res)=> {
     const {username} = req.query
-    
     try {
         const onedata = await Post.findOne({where:{username}})
         console.log(onedata +'여긴가')
