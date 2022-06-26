@@ -116,4 +116,25 @@ const dataModify = async (req,res)=> {
     }
 }
 
-module.exports = {userData,alldataserch,daydataserch,dataDelete,dataModify,namedataserch, onedataserch}
+//메모 입력하기 기능
+const userMemo = async(req,res)=> {
+    const {username} = req.query
+    const {memo} = req.body
+    try {
+        const nameread = await Post.findOne({where:{username}})
+        const namerecreate = await Post.create({nameread})
+        console.log(nameread)
+        if (!username) {
+            res.status(400).json({result:false,msg:"메모 작성이 불가능합니다."})
+        }else {
+            const memocreate = await Post.update({memo})
+            res.status(201).json({result:true,msg:"메모 생성 성공!",memocreate})
+        }
+        
+    }catch(error) {
+        console.log(error, "메모입력하기 기능에서 오류발생함")
+        res.status(400).json({result:false,msg:"메모 생성 실패!"})
+    }
+}
+
+module.exports = {userData,alldataserch,daydataserch,dataDelete,dataModify,namedataserch, onedataserch,userMemo}

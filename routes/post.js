@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const {userData,alldataserch,onedataserch,daydataserch,dataDelete,dataModify,namedataserch} = require('../controllers/post')
+const {userData,alldataserch,onedataserch,daydataserch,dataDelete,dataModify,namedataserch,userMemo} = require('../controllers/post')
 const authMiddleware = require('../middleware/authMiddleware')
 require("dotenv").config()
 
@@ -22,5 +22,8 @@ router.delete('/dataDelete', authMiddleware, dataDelete)
 
 //유저 데이터 수정하기 API
 router.put('/dataModify', authMiddleware, dataModify)
+
+//유저 메모(특이사항) 입력하기
+router.post('/userMemo', authMiddleware, userMemo)
 
 module.exports = router
