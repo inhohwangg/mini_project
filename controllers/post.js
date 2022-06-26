@@ -87,4 +87,33 @@ const daydataserch = async (req,res)=> {
     }
 }
 
-module.exports = {userData,alldataserch,onedataserch,daydataserch,namedataserch}
+//유저 데이터 삭제하기
+//썬더클라이언트 확인완료
+const dataDelete = async (req,res)=> {
+    const {username} = req.query
+    try {
+        const userdatadelete = await Post.destroy({
+            where:{username}
+        })
+        res.status(200).json({result:true,msg:"데이터 삭제 완료!",userdatadelete})
+    }catch(error) {
+        console.log(error,"데이터 삭제에서 오류남!")
+        res.status(400).json({result:false,msg:"데이터 삭제 실패!"})
+    }
+}
+
+//유저 데이터 수정하기
+//썬더클라이언트 확인완료
+const dataModify = async (req,res)=> {
+    const {username} = req.query
+    const {day1,day2,checktime,age,gender,phonenumber,signupday,position} = req.body
+    try {
+        const dataput = await Post.update({day1,day2,username,checktime,age,gender,phonenumber,signupday,position},{where:{username}})
+        res.status(200).json({result:true,msg:"데이터 수정 성공!",dataput})
+    }catch (error) {
+        console.log(error, "데이터 수정하기에서 오류 발생함!!")
+        res.status(400).json({result:false,msg:"데이터 수정 실패!!"})
+    }
+}
+
+module.exports = {userData,alldataserch,daydataserch,dataDelete,dataModify,namedataserch, onedataserch}

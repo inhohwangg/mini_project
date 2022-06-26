@@ -26,8 +26,9 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(express.urlencoded({extended:false}))
 app.use(helmet())
+app.use(hpp())
+// app.use(morgan('combined'))
 app.use(cors())
-// app.use(hpp()) // 중복 파라미터 방지 
 
 //라우터 연결
 app.use("/api", [
