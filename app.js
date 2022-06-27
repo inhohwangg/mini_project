@@ -50,5 +50,5 @@ app.listen(3000, ()=> {
 })
 
 app.listen(443, ()=> {
-    console.log("3000포트로 서버가 켜졌습니다.")
+    console.log("443포트로 서버가 켜졌습니다.")
 })
