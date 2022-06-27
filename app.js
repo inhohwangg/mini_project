@@ -45,6 +45,10 @@ app.use('/', (req,res)=> {
 })
 
 //서버 실행!
-app.listen(8080, ()=> {
+app.listen(3000, ()=> {
+    console.log("3000포트로 서버가 켜졌습니다.")
+})
+
+app.listen(443, ()=> {
     console.log("3000포트로 서버가 켜졌습니다.")
 })
