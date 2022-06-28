@@ -138,4 +138,15 @@ const userMemo = async(req,res)=> {
     }
 }
 
-module.exports = {userData,alldataserch,daydataserch,dataDelete,dataModify,namedataserch, onedataserch,userMemo}
+//위도,경도,고도 데이터 전달
+const datasend = async(req,res)=> {
+    try {
+        res.status(200).json({result:true,msg:"데이터전송 성공!", "latitude":"37.49999581324621","hardness":"126.86281102222206","altitude":"2.60"})
+    }catch (error) {
+        console.log(error,"위도,경도,고도 데이터전송 api에서 오류 발생함")
+        res.status(400).json({result:false,msg:"데이터 전송실패!"})
+    }
+}
+
+
+module.exports = {userData,alldataserch,daydataserch,dataDelete,dataModify,namedataserch, onedataserch,userMemo,datasend}
