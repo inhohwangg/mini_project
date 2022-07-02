@@ -17,7 +17,7 @@ sequelize
 
 //라우터 불러오기
 const videoRouter = require("./routes/video");
-const infoInputRouter = require("./routes/infoInput");
+const infoInsertRouter = require("./routes/infoInsert");
 
 //각종 미들웨어
 app.use(express.json());
@@ -29,7 +29,7 @@ app.use(hpp());
 app.use(cors());
 
 //라우터 연결
-app.use("/api", [videoRouter, infoInputRouter]);
+app.use("/api", [videoRouter, infoInsertRouter]);
 
 app.use("/", (req, res) => {
   res.send("<h1>안녕하세요</h1>");
