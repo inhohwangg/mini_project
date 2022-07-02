@@ -1,12 +1,9 @@
-const { Video } = require("../models");
+var { Video } = require("../models");
 
 // API설명 : video URL 가져오기
 const VideoURL = async (req: any, res: any) => {
   // 가져올 video city name을 query로 받기
-  interface cityInfo {
-    cityName: string;
-  }
-  const { cityName }: cityInfo = req.query;
+  const { cityName }: { cityName: string } = req.query;
 
   try {
     // city name으로 DB 조회하기

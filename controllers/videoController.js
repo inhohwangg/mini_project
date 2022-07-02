@@ -8,9 +8,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const { Video } = require("../models");
+var { Video } = require("../models");
 // API설명 : video URL 가져오기
 const VideoURL = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    // 가져올 video city name을 query로 받기
     const { cityName } = req.query;
     try {
         // city name으로 DB 조회하기
