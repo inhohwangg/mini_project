@@ -13,7 +13,7 @@ module.exports = (sequelize: any, DataTypes: any) => {
   }
   Video.init(
     {
-      videoURL: DataTypes.STRING,
+      videoUrl: DataTypes.STRING,
       cityName: DataTypes.STRING,
     },
     {
