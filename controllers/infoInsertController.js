@@ -26,7 +26,7 @@ const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             });
             const { result } = infoInputResult.dataValues;
             // DB에 저장한 도시별 정보 응답하기
-            return res.status(200).json({ result });
+            res.status(200).json({ result });
         }
     }
     catch (error) {

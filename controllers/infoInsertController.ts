@@ -28,7 +28,7 @@ const DBInputResult = async (req: any, res: any) => {
       const { result }: { result: object } = infoInputResult.dataValues;
 
       // DB에 저장한 도시별 정보 응답하기
-      return res.status(200).json({ result });
+      res.status(200).json({ result });
     }
   } catch (error) {
     console.log(error);
