@@ -13,10 +13,12 @@ const DBInputResult = async (req: any, res: any) => {
   try {
     for (let i = 0; i < cityList.length; i++) {
       const city = cityList[i];
+
       const file = fs.readFileSync(
         __dirname + `/detailInfo/${city}.json`,
         "utf-8"
       );
+
       const jsonFile = JSON.parse(file);
       const { cityName, cityDescription }: cityInfo = jsonFile;
 
@@ -26,10 +28,10 @@ const DBInputResult = async (req: any, res: any) => {
         cityDescription,
       });
       const { result }: { result: object } = infoInputResult.dataValues;
-
-      // DB에 저장한 도시별 정보 응답하기
-      res.status(200).json({ result });
+      console.log(`${i} : ` + result);
     }
+    // DB에 저장한 도시별 정보 응답하기
+    return res.status(200).send("OK");
   } catch (error) {
     console.log(error);
     console.log(
