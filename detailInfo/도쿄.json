@@ -1,6 +1,6 @@
 {
   "cityName": "도쿄",
-  "videoUrl": "s3://sideproject-bucket/city_video/Tokyo_video.mp4",
-  "audioUrl": "s3://sideproject-bucket/city_music/Tokyo_music.mp3",
+  "videoUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Tokyo_video.mp4",
+  "audioUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_music/Tokyo_music.mp3",
   "cityDescription": "도쿄, 토-쿄-, 또는 동경(東京とうきょう, 이 소리의 정보듣기 (도움말·정보), 영어: Tokyo)는 일본 혼슈 동부에 있는, 메이지 시대 이후 사실상 일본의 수도이자 최대 도시이다. 행정 구역 상으로는 도쿄도에 속하지만, 도쿄도는 다마 지역이나 이즈 제도, 오가사와라 제도의 넓은 지역을 포함하고 있어서 도시라는 뜻의 '도쿄'와는 그 의미가 조금 다르다."
 }

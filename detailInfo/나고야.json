@@ -1,6 +1,6 @@
 {
   "cityName": "나고야",
-  "videoUrl": "s3://sideproject-bucket/city_video/Nagoya_video.mp4",
-  "audioUrl": "s3://sideproject-bucket/city_music/Nagoya_music.mp3",
+  "videoUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Nagoya_video.mp4",
+  "audioUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_music/Nagoya_music.mp3",
   "cityDescription": "나고야시(일본어: 名古屋市 なごやし[*])는 아이치현의 서부에 위치한 현청 소재지이다. 정령지정도시로 지정되어 있다."
 }

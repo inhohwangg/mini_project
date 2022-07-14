@@ -8,15 +8,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 var { 인호님이정한모델 } = require("../models");
-const fs = require("fs");
+const fs_1 = __importDefault(require("fs"));
 // API설명 : 도시별 상세정보 DB에 입력하기(개발자용 API)
 const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const cityList = ["도쿄", "오키나와"];
     try {
         for (let i = 0; i < cityList.length; i++) {
             const city = cityList[i];
-            const file = fs.readFileSync(__dirname + `/detailInfo/${city}.json`, "utf-8");
+            const file = fs_1.default.readFileSync(__dirname + `/detailInfo/${city}.json`, "utf-8");
             const jsonFile = JSON.parse(file);
             const { cityName, cityDescription } = jsonFile;
             // cityName, cityDescription으로 DB에 삽입하기

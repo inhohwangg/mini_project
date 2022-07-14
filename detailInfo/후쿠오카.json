@@ -1,6 +1,6 @@
 {
   "cityName": "후쿠오카",
-  "videoUrl": "s3://sideproject-bucket/city_video/Fukuoka_video.mp4",
-  "audioUrl": "s3://sideproject-bucket/city_music/Fukuoka_music.mp3",
+  "videoUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Fukuoka_video.mp4",
+  "audioUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_music/Fukuoka_music.mp3",
   "cityDescription": "후쿠오카시(일본어: 福岡市, 문화어: 후꾸오까시)는 후쿠오카현의 현청 소재지이다. 일본 전국에서 6번째, 규슈에서는 제일 인구가 많은 도시이다. 1972년에 정령지정도시로 지정되었다."
 }

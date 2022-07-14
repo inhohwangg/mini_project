@@ -1,6 +1,6 @@
 {
   "cityName": "오키나와",
-  "videoUrl": "s3://sideproject-bucket/city_video/Okinawa_video.mp4",
-  "audioUrl": "s3://sideproject-bucket/city_music/Okinawa_music.mp3",
+  "videoUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Okinawa_video.mp4",
+  "audioUrl": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_music/Okinawa_music.mp3",
   "cityDescription": "오키나와현(일본어: 沖縄県, 오키나와어: うちなー 우치나)은 일본 최남단에 있는 현으로 오키나와섬을 포함한 류큐 제도를 관할한다. 현청 소재지는 오키나와섬의 가장 큰 도시인 나하시(那覇市)이다,"
 }

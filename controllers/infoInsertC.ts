@@ -1,5 +1,5 @@
 var { 인호님이정한모델 } = require("../models");
-const fs = require("fs");
+import fs from "fs";
 
 // API설명 : 도시별 상세정보 DB에 입력하기(개발자용 API)
 const DBInputResult = async (req: any, res: any) => {
