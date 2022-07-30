@@ -19,12 +19,10 @@ const videoUrlRes = async (req: any, res: any) => {
     // const { videoURL }: { videoURL: object } = videoInfo.dataValues;
 
     // DB에서 조회한 video url 응답하기
-    return res
-      .status(200)
-      .json({
-        result: true,
-        msg: "데이터 준비중입니다. 잠시만 기다려주세요;;;",
-      }); //videoURL
+    return res.status(200).json({
+      result: true,
+      msg: "데이터 준비중입니다. 잠시만 기다려주세요;;;",
+    }); //videoURL
   } catch (error) {
     console.log(error);
     console.log(
@@ -36,6 +34,8 @@ const videoUrlRes = async (req: any, res: any) => {
       .json({ msg: "알 수 없는 에러가 발생하였습니다. DE팀에 문의해주세요." });
   }
 };
+
+// 도시별로 API 만들지 말고 쿼리로 받으면 될거같은데..
 
 // 일본 동영상 API
 const Japan = async (req: any, res: any) => {
@@ -54,6 +54,7 @@ const Japan = async (req: any, res: any) => {
   }
 };
 
+// 그럼 이것도 필요없을듯요?
 const Germany = async (req: any, res: any) => {
   try {
     res.status(200).json({
