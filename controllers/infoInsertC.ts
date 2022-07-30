@@ -8,6 +8,8 @@ const DBInputResult = async (req: any, res: any) => {
     cityDescription: string;
   }
 
+  // 도시명 배열로 입력
+  // 도시명도 여기에 추가해주셔야 합니다!!~!~!~!~!~
   const cityList = ["도쿄", "오키나와"];
   try {
     for (let i = 0; i < cityList.length; i++) {
@@ -22,6 +24,7 @@ const DBInputResult = async (req: any, res: any) => {
       const { cityName, cityDescription }: cityInfo = jsonFile;
 
       // cityName, cityDescription으로 DB에 삽입하기
+      // 인호님이 데이터 넣을 모델 만들어줘야함....!!@!@!
       const infoInputResult = await 인호님이정한모델.create({
         cityName,
         cityDescription,

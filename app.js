@@ -7,7 +7,7 @@ const { sequelize } = require("./models");
 const cors = require("cors");
 //MySQL Sequelize 연결
 sequelize
-    .sync({ force: false })
+    .sync({ force: false }) // sync 메소드로 인해 서버 실행 시 mysql과 연동
     .then(() => {
     console.log("데이터베이스 연결 성공");
 })

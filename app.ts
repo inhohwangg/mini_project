@@ -7,7 +7,7 @@ const cors = require("cors");
 
 //MySQL Sequelize 연결
 sequelize
-  .sync({ force: false })
+  .sync({ force: false }) // sync 메소드로 인해 서버 실행 시 mysql과 연동
   .then(() => {
     console.log("데이터베이스 연결 성공");
   })
@@ -18,6 +18,7 @@ sequelize
 //라우터 불러오기
 const videoRouter = require("./routes/videoR");
 // const infoInsertRouter = require("./routes/infoInsertR");
+
 //각종 미들웨어
 app.use(express.json());
 app.use(express.urlencoded());

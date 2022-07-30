@@ -16,6 +16,8 @@ var { 인호님이정한모델 } = require("../models");
 const fs_1 = __importDefault(require("fs"));
 // API설명 : 도시별 상세정보 DB에 입력하기(개발자용 API)
 const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    // 도시명 배열로 입력
+    // 도시명도 여기에 추가해주셔야 합니다!!~!~!~!~!~
     const cityList = ["도쿄", "오키나와"];
     try {
         for (let i = 0; i < cityList.length; i++) {
@@ -24,6 +26,7 @@ const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             const jsonFile = JSON.parse(file);
             const { cityName, cityDescription } = jsonFile;
             // cityName, cityDescription으로 DB에 삽입하기
+            // 인호님이 데이터 넣을 모델 만들어줘야함....!!@!@!
             const infoInputResult = yield 인호님이정한모델.create({
                 cityName,
                 cityDescription,
