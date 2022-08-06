@@ -4,9 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npm run build:live",
-    "build": "tsc -p .",
-    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/app.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +14,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "helmet": "^5.1.0",
+    "helmet": "^5.1.1",
     "hpp": "^0.2.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
@@ -24,6 +22,7 @@
     "sequelize": "^6.21.3"
   },
   "devDependencies": {
+    "@types/node": "^18.6.4",
     "nodemon": "^2.0.19",
     "sequelize-cli": "^6.4.1",
     "ts-node": "^10.9.1"

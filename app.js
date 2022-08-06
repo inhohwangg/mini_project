@@ -16,14 +16,14 @@ sequelize
 });
 //라우터 불러오기
 const videoRouter = require("./routes/videoR");
-// const infoInsertRouter = require("./routes/infoInsertR");
+// const infoInsertRouter = require("./routes/infoInsertR");  --> 인호님이 데이터 넣어주시면 됩니다.
 //각종 미들웨어
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
 app.use(hpp());
-// app.use(morgan('combined'))
+// app.use(morgan('combined')) --> 안쓰는 건가요??
 app.use(cors());
 //라우터 연결
 app.use("/api", [videoRouter]);

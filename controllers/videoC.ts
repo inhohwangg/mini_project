@@ -6,14 +6,35 @@ const videoUrlRes = async (req: any, res: any) => {
   const { cityName }: { cityName: string } = req.query;
 
   try {
+    const fukuoka = [
+      "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_total/Fukuoka_total.mp4",
+    ];
+    const nagoya = [
+      "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_total/Nagoya_total.mp4",
+    ];
+    const okinawa = [
+      "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_total/Okinawa_total.mp4",
+    ];
+    const tokyo = [
+      "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_total/Tokyo_total.mp4",
+    ];
+
+    let videoUrl;
+    if (cityName === "fukuoka") videoUrl = fukuoka;
+    else if (cityName === "nagoya") videoUrl = nagoya;
+    else if (cityName === "okinawa") videoUrl = okinawa;
+    else if (cityName === "tokyo") videoUrl = tokyo;
+    else throw "지정된 도시명이 맞는지 확인해주세요";
+
     // city name으로 DB 조회하기
-    const videoInfo = await Video.findOne({
+    /* const videoInfo = await Video.findOne({
       logging: false,
       attributes: ["videoURL", "cityName"],
       where: {
         cityName,
       },
     });
+    */
 
     // 잠시 보류
     // const { videoURL }: { videoURL: object } = videoInfo.dataValues;
@@ -21,7 +42,7 @@ const videoUrlRes = async (req: any, res: any) => {
     // DB에서 조회한 video url 응답하기
     return res.status(200).json({
       result: true,
-      msg: "데이터 준비중입니다. 잠시만 기다려주세요;;;",
+      videoUrl: videoUrl,
     }); //videoURL
   } catch (error) {
     console.log(error);
@@ -36,7 +57,6 @@ const videoUrlRes = async (req: any, res: any) => {
 };
 
 // 도시별로 API 만들지 말고 쿼리로 받으면 될거같은데..
-
 // 일본 동영상 API
 const Japan = async (req: any, res: any) => {
   try {
@@ -71,4 +91,4 @@ const Germany = async (req: any, res: any) => {
   }
 };
 
-module.exports = { Germany, Japan };
+module.exports = { videoUrlRes, Germany, Japan };
