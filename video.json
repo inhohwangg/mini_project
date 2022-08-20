@@ -14,5 +14,24 @@
   "나고야": {
     "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Nagoya_video.mp4",
     "description": ""
+  },
+
+  "서울숲": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Seoul+forest_video.mp4",
+    "description": "상기한 체육 공원, 경마장 등의 시설을 완전히 철거하지 않고 콘크리트 골격을 일부 남긴 후 공원으로 리폼했다. 도시 속의 녹지라는 컨셉에 상당히 잘 어울린다."
+  },
+
+  "서울 익선동": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Seoul+Ikseon_video.mp4",
+    "description": "익선다다를 시작으로 개발업체들이 이 지역에 들어와서 한옥 일부를 개조한 뒤 액세서리점이나 작은 카페 등을 만들어 영업하기 시작.서울에 현존하는 한옥마을 중에서 가장 상업화 된 곳."
+  },
+  "대구 서문시장": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Daegu+SeomunMarket_video.mp4",
+    "description": "대구광역시 중구 대신동에 있는 재래시장으로, 대구 최대의 재래시장이다. 대구의 2대 장터를 이루고 있다."
+  },
+  
+  "부산 해운대": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Busan+Haeundae_video.mp4",
+    "description": "대한민국 부산광역시의 해운대구 일대를 가리키는 지명으로 부산의 상징들과 유명 관광지가 있고 호텔, 식당가, 영화관 및 쇼핑몰 등 위락 시설이 많다."
   }
 }
