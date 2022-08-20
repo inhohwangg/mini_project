@@ -1,30 +1,30 @@
 {
-    "도쿄": {
-      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Tokyo_video.mp4",
-      "description": "도쿄에는 일본 각 정부 부처, 천황이 기거하는 고쿄 등이 있다. 도쿄는 세계에서 제조업이 가장 발달한 도시이다. 또한 수많은 다국적 기업들이 도쿄에 본사 또는 지사를 두고 있으며, 세계의 게임산업, 만화와 애니메이션 산업, 영상, 디지털, 첨단산업 등의 중심지이다. 도쿄는 세계 최대의 지하철 교통망을 가지고 있으며, 세계에서 가장 큰 도시 광역권을 구성한다. 뉴욕, 런던과 함께 세계 3대 경제 수도로 불린다."
-    },
-    "오키나와": {
-      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Okinawa_video.mp4",
-      "description": "일본 열도의 남쪽, 류큐 제도에 있는 지역이다. 기후는 야에야마 제도에선 최한월 평균 기온이 18℃이상되는 열대 기후이며 다른 지역은 온대 기후를 보인다."
-    },
-    "후쿠오카": {
-      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Fukuoka_video.mp4",
-      "description": "후쿠오카시(일본어: 福岡市, 문화어: 후꾸오까시)는 후쿠오카현의 현청 소재지이다. 일본 전국에서 6번째, 규슈에서는 제일 인구가 많은 도시이다. 1972년에 정령지정도시로 지정되었다. 긴키 지방 서쪽의 서일본에선 2번째로 도쿄 23구를 제외한 전국의 도시는 요코하마시, 오사카시, 나고야시, 삿포로시에 이어 5번째 인구 (160만명)를 보유하고 있다. 규슈지방의 행정 경제 교통의 중심지로서 지역 최대의 인구를 가지고 있다."
-    },
-    "나고야": {
-      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Nagoya_video.mp4",
-      "description": "역사적으로 교토와 도쿄의 중간에 위치해 '중앙의 수도'라는 뜻으로 주쿄(中京)로 불렸다. 1610년에 도쿠가와 이에야스는 오와리 국의 국부를 기요스로부터 약 7 km 떨어진 더 전략적인 곳에 위치한 오늘날의 나고야로 옮겼다."
-    },
-    "로텐부르크": {
-      "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Rothenburg_video.mp4",
-      "description":"인구 약 15만 5400명이다. 타우버강의 계곡에 자리잡고있다. 지명은 타우버강 위쪽에 있는 로텐부르크라는뜻이며, 줄여서로텐부르크라고도 한다. 처음 문헌에 등장한 것은 9세기로 로텐부레로라고 표기되어있다."
-    },
-    "드레스덴":{
-      "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Dresden_video.mp4",
-      "description":"독일의 도시이자 작센 주의 주도. 오랫동안 작센의 정치적 중심지였고 지금도 그렇지만 인구수에서는 라이프치히에 밀려 제2의 도시이다."
-    },
-    "하이델베르크":{
-      "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Heidelberg_video.mp4",
-      "description":"독일 라인 강 지류인 네카르 강변에 위치한 바덴뷔르템베르크 주의 도시이다. 유구한 역사의 하이델베르크 성과 독일에서 가장 오래된 대학으로 알려진 하이델베르크 대학교로 유명한 도시이다."
-    }
+  "도쿄": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Tokyo_video.mp4",
+    "description": "도쿄에는 일본 각 정부 부처, 천황이 기거하는 고쿄 등이 있다. 도쿄는 세계에서 제조업이 가장 발달한 도시이다. 또한 수많은 다국적 기업들이 도쿄에 본사 또는 지사를 두고 있으며, 세계의 게임산업, 만화와 애니메이션 산업, 영상, 디지털, 첨단산업 등의 중심지이다. 도쿄는 세계 최대의 지하철 교통망을 가지고 있으며, 세계에서 가장 큰 도시 광역권을 구성한다. 뉴욕, 런던과 함께 세계 3대 경제 수도로 불린다."
+  },
+  "오키나와": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Okinawa_video.mp4",
+    "description": "일본 열도의 남쪽, 류큐 제도에 있는 지역이다. 기후는 야에야마 제도에선 최한월 평균 기온이 18℃이상되는 열대 기후이며 다른 지역은 온대 기후를 보인다."
+  },
+  "후쿠오카": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Fukuoka_video.mp4",
+    "description": "후쿠오카시(일본어: 福岡市, 문화어: 후꾸오까시)는 후쿠오카현의 현청 소재지이다. 일본 전국에서 6번째, 규슈에서는 제일 인구가 많은 도시이다. 1972년에 정령지정도시로 지정되었다. 긴키 지방 서쪽의 서일본에선 2번째로 도쿄 23구를 제외한 전국의 도시는 요코하마시, 오사카시, 나고야시, 삿포로시에 이어 5번째 인구 (160만명)를 보유하고 있다. 규슈지방의 행정 경제 교통의 중심지로서 지역 최대의 인구를 가지고 있다."
+  },
+  "나고야": {
+    "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Nagoya_video.mp4",
+    "description": "역사적으로 교토와 도쿄의 중간에 위치해 '중앙의 수도'라는 뜻으로 주쿄(中京)로 불렸다. 1610년에 도쿠가와 이에야스는 오와리 국의 국부를 기요스로부터 약 7 km 떨어진 더 전략적인 곳에 위치한 오늘날의 나고야로 옮겼다."
+  },
+  "로텐부르크": {
+    "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Rothenburg_video.mp4",
+    "description":"인구 약 15만 5400명이다. 타우버강의 계곡에 자리잡고있다. 지명은 타우버강 위쪽에 있는 로텐부르크라는뜻이며, 줄여서로텐부르크라고도 한다. 처음 문헌에 등장한 것은 9세기로 로텐부레로라고 표기되어있다."
+  },
+  "드레스덴":{
+    "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Dresden_video.mp4",
+    "description":"독일의 도시이자 작센 주의 주도. 오랫동안 작센의 정치적 중심지였고 지금도 그렇지만 인구수에서는 라이프치히에 밀려 제2의 도시이다."
+  },
+  "하이델베르크":{
+    "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Heidelberg_video.mp4",
+    "description":"독일 라인 강 지류인 네카르 강변에 위치한 바덴뷔르템베르크 주의 도시이다. 유구한 역사의 하이델베르크 성과 독일에서 가장 오래된 대학으로 알려진 하이델베르크 대학교로 유명한 도시이다."
+  }
 }
