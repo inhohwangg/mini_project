@@ -14,5 +14,17 @@
     "나고야": {
       "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Nagoya_video.mp4",
       "description": ""
+    },
+    "로텐부르크": {
+      "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Rothenburg_video.mp4",
+      "description":"인구 약 15만 5400명이다. 타우버강의 계곡에 자리잡고있다. 지명은 타우버강 위쪽에 있는 로텐부르크라는뜻이며, 줄여서로텐부르크라고도 한다. 처음 문헌에 등장한 것은 9세기로 로텐부레로라고 표기되어있다."
+    },
+    "드레스덴":{
+      "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Dresden_video.mp4",
+      "description":"독일의 도시이자 작센 주의 주도. 오랫동안 작센의 정치적 중심지였고 지금도 그렇지만 인구수에서는 라이프치히에 밀려 제2의 도시이다."
+    },
+    "하이델베르크":{
+      "url":"https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Heidelberg_video.mp4",
+      "description":"독일 라인 강 지류인 네카르 강변에 위치한 바덴뷔르템베르크 주의 도시이다. 유구한 역사의 하이델베르크 성과 독일에서 가장 오래된 대학으로 알려진 하이델베르크 대학교로 유명한 도시이다."
     }
-  }
+}
