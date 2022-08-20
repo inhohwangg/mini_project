@@ -3,9 +3,10 @@ var express = require("express");
 const app = require("express")();
 const helmet = require("helmet");
 const hpp = require("hpp");
-const morgan = require('morgan');
+const morgan = require("morgan");
 const { sequelize } = require("./models");
 const cors = require("cors");
+const fs = require("fs");
 //MySQL Sequelize 연결
 sequelize
     .sync({ force: false }) // sync 메소드로 인해 서버 실행 시 mysql과 연동
@@ -17,17 +18,18 @@ sequelize
 });
 //라우터 불러오기
 const videoRouter = require("./routes/videoR");
-// const infoInsertRouter = require("./routes/infoInsertR");  --> 인호님이 데이터 넣어주시면 됩니다.
+const infoInsertRouter = require("./routes/infoInsertR");
 //각종 미들웨어
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
 app.use(hpp());
-app.use(morgan('combined'));
+app.use(morgan("combined"));
 app.use(cors());
 //라우터 연결
 app.use("/api", [videoRouter]);
+app.use("/infoInsert", [infoInsertRouter]);
 app.use("/", (req, res) => {
     res.send("<h1>안녕하세요</h1>");
 });

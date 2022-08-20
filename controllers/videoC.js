@@ -9,6 +9,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 var { Video } = require("../models");
+// // API 설명 : video URL 저장하기
+// const videoCreate = async (req:any, res:any) => {
+//   try {
+// //도시별 url을 담은 json을 만들고 
+//   }catch {
+//   }
+// }
 // API설명 : video URL 가져오기
 const videoUrlRes = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // 가져올 video city name을 query로 받기
