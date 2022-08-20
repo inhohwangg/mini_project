@@ -1,11 +1,25 @@
 var { Video } = require("../models");
 import fs from "fs";
 
-const test = async (req:any, res:any)=> {
+const test = async(req:any,res:any)=> {
   try {
-    res.send('잘돌아감')
+    const data = fs.readFileSync('video.json', {encoding:'utf8'})
+    let cityName = JSON.parse(data)
+    res.status(200).json({result:true,cityName})
   }catch(error) {
-    console.log(error,'api다시짜야함...')
+    console.log(error)
+    res.status(400).json({result:false})
+  }
+}
+
+//동영상 DB 생성
+const videoCreate = async (req:any, res:any)=> {
+  const {url,description} = req.body
+  try {
+    await Video.create(url, description)
+    res.status(200).json({result:true,url,description})
+  }catch(error) {
+    console.log(error,'code를 확인해주세요')
   }
 }
 
@@ -54,4 +68,4 @@ const DBInputResult = async (req: any, res: any) => {
   }
 };
 
-module.exports = { DBInputResult, test };
+module.exports = { DBInputResult, videoCreate , test };

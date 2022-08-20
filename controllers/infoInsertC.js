@@ -16,10 +16,24 @@ var { Video } = require("../models");
 const fs_1 = __importDefault(require("fs"));
 const test = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        res.send('잘돌아감');
+        const data = fs_1.default.readFileSync('video.json', { encoding: 'utf8' });
+        let cityName = JSON.parse(data);
+        res.status(200).json({ result: true, cityName });
     }
     catch (error) {
-        console.log(error, 'api다시짜야함...');
+        console.log(error);
+        res.status(400).json({ result: false });
+    }
+});
+//동영상 DB 생성
+const videoCreate = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { url, description } = req.body;
+    try {
+        yield Video.create(url, description);
+        res.status(200).json({ result: true, url, description });
+    }
+    catch (error) {
+        console.log(error, 'code를 확인해주세요');
     }
 });
 // API설명 : 도시별 상세정보 DB에 입력하기(개발자용 API)
@@ -53,4 +67,4 @@ const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             .json({ msg: "알 수 없는 에러가 발생하였습니다. DE팀에 문의해주세요." });
     }
 });
-module.exports = { DBInputResult, test };
+module.exports = { DBInputResult, videoCreate, test };
