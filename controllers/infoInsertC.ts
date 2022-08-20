@@ -1,5 +1,13 @@
-var { 인호님이정한모델 } = require("../models");
+var { Video } = require("../models");
 import fs from "fs";
+
+const test = async (req:any, res:any)=> {
+  try {
+    res.send('잘돌아감')
+  }catch(error) {
+    console.log(error,'api다시짜야함...')
+  }
+}
 
 // API설명 : 도시별 상세정보 DB에 입력하기(개발자용 API)
 const DBInputResult = async (req: any, res: any) => {
@@ -25,7 +33,7 @@ const DBInputResult = async (req: any, res: any) => {
 
       // cityName, cityDescription으로 DB에 삽입하기
       // 인호님이 데이터 넣을 모델 만들어줘야함....!!@!@!
-      const infoInputResult = await 인호님이정한모델.create({
+      const infoInputResult = await Video.create({
         cityName,
         cityDescription,
       });
@@ -46,4 +54,4 @@ const DBInputResult = async (req: any, res: any) => {
   }
 };
 
-module.exports = { DBInputResult };
+module.exports = { DBInputResult, test };

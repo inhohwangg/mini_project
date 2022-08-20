@@ -12,8 +12,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var { 인호님이정한모델 } = require("../models");
+var { Video } = require("../models");
 const fs_1 = __importDefault(require("fs"));
+const test = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        res.send('잘돌아감');
+    }
+    catch (error) {
+        console.log(error, 'api다시짜야함...');
+    }
+});
 // API설명 : 도시별 상세정보 DB에 입력하기(개발자용 API)
 const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // 도시명 배열로 입력
@@ -27,7 +35,7 @@ const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             const { cityName, cityDescription } = jsonFile;
             // cityName, cityDescription으로 DB에 삽입하기
             // 인호님이 데이터 넣을 모델 만들어줘야함....!!@!@!
-            const infoInputResult = yield 인호님이정한모델.create({
+            const infoInputResult = yield Video.create({
                 cityName,
                 cityDescription,
             });
@@ -45,4 +53,4 @@ const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             .json({ msg: "알 수 없는 에러가 발생하였습니다. DE팀에 문의해주세요." });
     }
 });
-module.exports = { DBInputResult };
+module.exports = { DBInputResult, test };
