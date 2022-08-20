@@ -1,0 +1,18 @@
+{
+    "도쿄": {
+      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Tokyo_video.mp4",
+      "description": ""
+    },
+    "오키나와": {
+      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Okinawa_video.mp4",
+      "description": ""
+    },
+    "후쿠오카": {
+      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Fukuoka_video.mp4",
+      "description": ""
+    },
+    "나고야": {
+      "url": "https://sideproject-bucket.s3.ap-northeast-2.amazonaws.com/city_video/Nagoya_video.mp4",
+      "description": ""
+    }
+  }

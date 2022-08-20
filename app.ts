@@ -5,6 +5,7 @@ const hpp = require("hpp");
 const morgan = require('morgan')
 const { sequelize } = require("./models");
 const cors = require("cors");
+const fs = require('fs')
 
 //MySQL Sequelize 연결
 sequelize
