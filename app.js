@@ -3,6 +3,7 @@ var express = require("express");
 const app = require("express")();
 const helmet = require("helmet");
 const hpp = require("hpp");
+const morgan = require('morgan');
 const { sequelize } = require("./models");
 const cors = require("cors");
 //MySQL Sequelize 연결
@@ -23,7 +24,7 @@ app.use(express.urlencoded());
 app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
 app.use(hpp());
-// app.use(morgan('combined')) --> 안쓰는 건가요??
+app.use(morgan('combined'));
 app.use(cors());
 //라우터 연결
 app.use("/api", [videoRouter]);
