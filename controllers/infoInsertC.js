@@ -22,7 +22,6 @@ const infoCityDetail = (req, res) => __awaiter(void 0, void 0, void 0, function*
         let cityData = JSON.parse(data);
         let name;
         for (let i = 0; i < 11; i++) {
-            console.log(cityData[i].name);
             if (cityName === cityData[i].name) {
                 name = cityData[i].description;
             }

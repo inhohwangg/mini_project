@@ -9,7 +9,6 @@ const infoCityDetail = async(req:any,res:any)=> {
     let cityData = JSON.parse(data)
     let name
     for (let i = 0; i < 11; i++) {
-      console.log(cityData[i].name)
       if (cityName === cityData[i].name) {
         name = cityData[i].description
       }
