@@ -13,7 +13,7 @@ const infoCityDetail = async(req:any,res:any)=> {
         name = cityData[i].description
       }
     }
-    res.status(200).json({result:true,name})
+    await res.status(200).json({result:true,name})
   }catch(error) {
     console.log(error)
     res.status(400).json({result:false})

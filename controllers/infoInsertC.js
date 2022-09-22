@@ -26,7 +26,7 @@ const infoCityDetail = (req, res) => __awaiter(void 0, void 0, void 0, function*
                 name = cityData[i].description;
             }
         }
-        res.status(200).json({ result: true, name });
+        yield res.status(200).json({ result: true, name });
     }
     catch (error) {
         console.log(error);
