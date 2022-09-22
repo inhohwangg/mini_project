@@ -8,7 +8,8 @@ const infoCityDetail = async(req:any,res:any)=> {
     const data = fs.readFileSync('video.json', {encoding:'utf8'})
     let cityData = JSON.parse(data)
     let name
-    for (let i = 0; i <cityName.length; i++) {
+    for (let i = 0; i < 11; i++) {
+      console.log(cityData[i].name)
       if (cityName === cityData[i].name) {
         name = cityData[i].description
       }

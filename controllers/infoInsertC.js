@@ -21,7 +21,8 @@ const infoCityDetail = (req, res) => __awaiter(void 0, void 0, void 0, function*
         const data = fs_1.default.readFileSync('video.json', { encoding: 'utf8' });
         let cityData = JSON.parse(data);
         let name;
-        for (let i = 0; i < cityName.length; i++) {
+        for (let i = 0; i < 11; i++) {
+            console.log(cityData[i].name);
             if (cityName === cityData[i].name) {
                 name = cityData[i].description;
             }
