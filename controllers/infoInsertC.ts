@@ -4,7 +4,6 @@ import fs from "fs";
 // API 설명 : 도시별 상세 정보 불러오기
 const infoCityDetail = async(req:any,res:any)=> {
   const { cityName }: { cityName: string } = req.query;
-  console.log(cityName)
   try {
     const data = fs.readFileSync('video.json', {encoding:'utf8'})
     let cityData = JSON.parse(data)
@@ -12,12 +11,13 @@ const infoCityDetail = async(req:any,res:any)=> {
     for (let i = 0; i < 11; i++) {
       if (cityName === cityData[i].name) {
         name = cityData[i].description
+        return await res.status(200).json({result:true,name})
       }
     }
-    await res.status(200).json({result:true,name})
+    throw "지정된 도시명이 맞는지 확인해주세요"
   }catch(error) {
     console.log(error)
-    res.status(400).json({result:false})
+    res.status(400).json({result:false,msg:'지정된 도시명이 맞는지 확인해주세요'})
   }
 }
 

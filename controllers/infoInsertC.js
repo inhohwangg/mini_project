@@ -17,7 +17,6 @@ const fs_1 = __importDefault(require("fs"));
 // API 설명 : 도시별 상세 정보 불러오기
 const infoCityDetail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { cityName } = req.query;
-    console.log(cityName);
     try {
         const data = fs_1.default.readFileSync('video.json', { encoding: 'utf8' });
         let cityData = JSON.parse(data);
@@ -25,13 +24,14 @@ const infoCityDetail = (req, res) => __awaiter(void 0, void 0, void 0, function*
         for (let i = 0; i < 11; i++) {
             if (cityName === cityData[i].name) {
                 name = cityData[i].description;
+                return yield res.status(200).json({ result: true, name });
             }
         }
-        yield res.status(200).json({ result: true, name });
+        throw "지정된 도시명이 맞는지 확인해주세요";
     }
     catch (error) {
         console.log(error);
-        res.status(400).json({ result: false });
+        res.status(400).json({ result: false, msg: '지정된 도시명이 맞는지 확인해주세요' });
     }
 });
 //동영상 DB 생성
