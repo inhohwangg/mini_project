@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var { Video } = require("../models");
 const fs_1 = __importDefault(require("fs"));
+// API 설명 : 도시별 상세 정보 불러오기
 const infoCityDetail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { cityName } = req.query;
     console.log(cityName);

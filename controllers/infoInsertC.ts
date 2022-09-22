@@ -1,6 +1,7 @@
 var { Video } = require("../models");
 import fs from "fs";
 
+// API 설명 : 도시별 상세 정보 불러오기
 const infoCityDetail = async(req:any,res:any)=> {
   const { cityName }: { cityName: string } = req.query;
   console.log(cityName)
