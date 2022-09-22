@@ -14,11 +14,19 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var { Video } = require("../models");
 const fs_1 = __importDefault(require("fs"));
-const test = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const infoCityDetail = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { cityName } = req.query;
+    console.log(cityName);
     try {
         const data = fs_1.default.readFileSync('video.json', { encoding: 'utf8' });
-        let cityName = JSON.parse(data);
-        res.status(200).json({ result: true, cityName });
+        let cityData = JSON.parse(data);
+        let name;
+        for (let i = 0; i < cityName.length; i++) {
+            if (cityName === cityData[i].name) {
+                name = cityData[i].description;
+            }
+        }
+        res.status(200).json({ result: true, name });
     }
     catch (error) {
         console.log(error);
@@ -67,4 +75,4 @@ const DBInputResult = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             .json({ msg: "알 수 없는 에러가 발생하였습니다. DE팀에 문의해주세요." });
     }
 });
-module.exports = { DBInputResult, videoCreate, test };
+module.exports = { DBInputResult, videoCreate, infoCityDetail };

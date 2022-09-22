@@ -1,11 +1,19 @@
 var { Video } = require("../models");
 import fs from "fs";
 
-const test = async(req:any,res:any)=> {
+const infoCityDetail = async(req:any,res:any)=> {
+  const { cityName }: { cityName: string } = req.query;
+  console.log(cityName)
   try {
     const data = fs.readFileSync('video.json', {encoding:'utf8'})
-    let cityName = JSON.parse(data)
-    res.status(200).json({result:true,cityName})
+    let cityData = JSON.parse(data)
+    let name
+    for (let i = 0; i <cityName.length; i++) {
+      if (cityName === cityData[i].name) {
+        name = cityData[i].description
+      }
+    }
+    res.status(200).json({result:true,name})
   }catch(error) {
     console.log(error)
     res.status(400).json({result:false})
@@ -68,4 +76,4 @@ const DBInputResult = async (req: any, res: any) => {
   }
 };
 
-module.exports = { DBInputResult, videoCreate , test };
+module.exports = { DBInputResult, videoCreate , infoCityDetail };
